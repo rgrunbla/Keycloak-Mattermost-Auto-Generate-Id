@@ -31,13 +31,13 @@ import java.util.Set;
 /**
  * @author <a href="mailto:remy@grunblatt.org">Rémy Grünblatt</a>
  */
-public class SysoutEventListenerProviderFactory implements EventListenerProviderFactory {
+public class MattermostAutoGenerateIdEventListenerProviderFactory implements EventListenerProviderFactory {
 
     private Set<EventType> includedEvents;
 
     @Override
     public EventListenerProvider create(KeycloakSession session) {
-        return new SysoutEventListenerProvider(session, includedEvents);
+        return new MattermostAutoGenerateIdEventListenerProvider(session, includedEvents);
     }
 
     @Override
@@ -57,7 +57,7 @@ public class SysoutEventListenerProviderFactory implements EventListenerProvider
 
     @Override
     public String getId() {
-        return "sysout";
+        return "mattermost-auto-generate-id";
     }
 
 }

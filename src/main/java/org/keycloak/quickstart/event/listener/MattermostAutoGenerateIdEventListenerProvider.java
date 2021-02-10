@@ -35,11 +35,11 @@ import java.util.Random;
 /**
  * @author <a href="mailto:remy@grunblatt.org">Rémy Grünblatt</a>
  */
-public class SysoutEventListenerProvider implements EventListenerProvider {
+public class MattermostAutoGenerateIdEventListenerProvider implements EventListenerProvider {
     private Set<EventType> includedEvents;
     private KeycloakSession session;
 
-    public SysoutEventListenerProvider(KeycloakSession session, Set<EventType> includedEvents) {
+    public MattermostAutoGenerateIdEventListenerProvider(KeycloakSession session, Set<EventType> includedEvents) {
         this.session = session;
         this.includedEvents = includedEvents;
     }
