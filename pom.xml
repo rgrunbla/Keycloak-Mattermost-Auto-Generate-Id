@@ -38,21 +38,25 @@
                 <groupId>org.keycloak</groupId>
                 <artifactId>keycloak-core</artifactId>
                 <version>${keycloakVersion}</version>
+                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.keycloak</groupId>
                 <artifactId>keycloak-server-spi-private</artifactId>
                 <version>${keycloakVersion}</version>
+                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.keycloak</groupId>
                 <artifactId>keycloak-services</artifactId>
                 <version>${keycloakVersion}</version>
+                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.keycloak</groupId>
                 <artifactId>keycloak-server-spi</artifactId>
                 <version>${keycloakVersion}</version>
+                <scope>provided</scope>
             </dependency>
             <dependency>
                 <groupId>org.jasig.cas.client</groupId>
@@ -71,6 +75,7 @@
         <dependency>
             <groupId>org.keycloak</groupId>
             <artifactId>keycloak-core</artifactId>
+            <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.keycloak</groupId>
@@ -79,11 +84,13 @@
         </dependency>
         <dependency>
             <groupId>org.keycloak</groupId>
-            <artifactId>keycloak-server-spi-private</artifactId>
+	        <artifactId>keycloak-server-spi-private</artifactId>
+	        <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.keycloak</groupId>
-            <artifactId>keycloak-server-spi</artifactId>
+	        <artifactId>keycloak-server-spi</artifactId>
+  	        <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>org.jasig.cas.client</groupId>
