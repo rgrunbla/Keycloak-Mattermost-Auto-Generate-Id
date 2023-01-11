@@ -48,10 +48,10 @@ public class MattermostAutoGenerateIdEventListenerProvider implements EventListe
     public void onEvent(Event event) {
         if (includedEvents != null && includedEvents.contains(event.getType())) {
             RealmModel realm = session.getContext().getRealm();
-            UserModel user = session.users().getUserById(event.getUserId(), realm);
-            if(user.getAttribute("mattermostId").isEmpty()) {
+            UserModel user = session.users().getUserById(realm, event.getUserId());
+               if(user.getAttributeStream("mattermostId").count() == 0) {
                 Long generatedLong = new Random().nextLong() & Long.MAX_VALUE;
-                while (!(session.users().searchForUserByUserAttribute("mattermostId", generatedLong.toString(), realm).isEmpty())) {
+                while (!(session.users().searchForUserByUserAttributeStream(realm, "mattermostId", generatedLong.toString()).count() == 0)) {
                     System.out.println("Collision detected, generating a new id.");
                     generatedLong = new Random().nextLong() & Long.MAX_VALUE;
                 }
